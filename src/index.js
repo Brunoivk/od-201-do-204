@@ -38,6 +38,21 @@ app.get('/brojslova', (req, res) =>{
 }) 
 
 // 205 
+app.get('/broj', (req, res) =>{
+
+    let a1 = ["aa", "b1", "b1", "ce", "aa", "ce", "b1", "z"]
+
+
+    let brojac = a1.reduce((s, e) =>{
+        s[e] = (s[e] || 0) + 1;
+        return s
+    }, {}) 
+
+res.json(brojac) 
+console.log(brojac) 
+
+})
+
 
 
 //201
